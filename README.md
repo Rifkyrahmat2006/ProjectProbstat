@@ -27,7 +27,8 @@ Program1/
 │   └── Geografi.csv
 │
 ├── app.py
-└── requirements.txt
+├── requirements.txt
+└── vercel.json
 ```
 
 ## Deskripsi Program
@@ -73,10 +74,19 @@ Program ini merupakan website pengolahan data hasil tryout SNBT yang dibangun me
 
 ## Teknologi yang Digunakan
 
-- Python 3.x
+### Library Python
 - Flask (Web Framework)
 - Matplotlib (Visualisasi Data)
 - Seaborn (Visualisasi Data)
+
+### Library Bawaan Python
+- csv (Pembacaan file CSV)
+- os (Operasi file)
+- math (Perhitungan statistik)
+- io (BytesIO untuk gambar)
+- base64 (Encoding gambar)
+
+### Frontend
 - HTML5
 - CSS3
 - JavaScript
@@ -84,6 +94,7 @@ Program ini merupakan website pengolahan data hasil tryout SNBT yang dibangun me
 
 ## Cara Menjalankan Program
 
+### Lokal
 1. Clone repository ini
 2. Install dependencies:
    ```bash
@@ -95,17 +106,22 @@ Program ini merupakan website pengolahan data hasil tryout SNBT yang dibangun me
    ```
 4. Buka browser dan akses `http://localhost:5000`
 
+### Deployment di Vercel
+1. Push kode ke repository Git
+2. Hubungkan repository ke Vercel
+3. Vercel akan otomatis mendeteksi konfigurasi dari vercel.json
+4. Aplikasi akan di-deploy secara otomatis
+
 ## Dependencies
 
 - flask>=2.3.3
-- pandas>=2.1.0
 - matplotlib>=3.8.0
 - seaborn>=0.13.0
-- numpy>=1.26.0
 
 ## Catatan
 
 - Program menggunakan file CSV terpisah untuk setiap bidang
 - Setiap bidang dibatasi 20 data peserta
 - Visualisasi data dibuat secara dinamis menggunakan matplotlib dan seaborn
-- Perhitungan statistik diimplementasikan secara manual menggunakan Python 
+- Perhitungan statistik diimplementasikan secara manual menggunakan Python
+- Program dapat di-deploy ke Vercel menggunakan konfigurasi vercel.json 

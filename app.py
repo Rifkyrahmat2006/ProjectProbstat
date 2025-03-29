@@ -11,7 +11,7 @@ import base64
 
 app = Flask(__name__)
 
-# Dictionary untuk mapping nama bidang
+# Dictionary untuk mapping kode bidang ke nama lengkap
 SUBJECTS = {
     'matematika': 'Matematika',
     'fisika': 'Fisika',
