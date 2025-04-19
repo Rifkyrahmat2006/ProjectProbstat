@@ -87,6 +87,7 @@
                         <li class="list-group-item">Standar Deviasi: {{ "%.2f"|format(statistics.std_dev) }}</li>
                         <li class="list-group-item">Varians: {{ "%.2f"|format(statistics.std_dev ** 2) }}</li>
                         <li class="list-group-item">Mid Range: {{ "%.2f"|format((statistics.max + statistics.min) / 2) }}</li>
+                        <li class="list-group-item">Modus: {{ "%.2f"|format(statistics.mode) }}</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
@@ -103,13 +104,6 @@
                     {% set upper_bound = statistics.q3 + 1.5 * (statistics.q3 - statistics.q1) %}
                     <p>Batas bawah: {{ "%.2f"|format(lower_bound) }}</p>
                     <p>Batas atas: {{ "%.2f"|format(upper_bound) }}</p>
-                    <p>Outliers: 
-                        {% for value in statistics.sorted_data %}
-                            {% if value < lower_bound or value > upper_bound %}
-                                {{ "%.2f"|format(value) }},
-                            {% endif %}
-                        {% endfor %}
-                    </p>
                 </div>
             </div>
         </div>
@@ -182,14 +176,6 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h6 class="mb-3">Statistik Deskriptif</h6>
-                    <ul class="list-group">
-                        <li class="list-group-item">Skewness: {{ "%.2f"|format(statistics.skewness) }}</li>
-                        <li class="list-group-item">Kurtosis: {{ "%.2f"|format(statistics.kurtosis) }}</li>
-                        <li class="list-group-item">Modus: {{ "%.2f"|format(statistics.mode) }}</li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
@@ -238,6 +224,65 @@
                             <p>P(X ≥ 3) = Σ C(5,k) * (0.5)^k * (0.5)^(5-k) untuk k = 3,4,5</p>
                             <p>P(X ≥ 3) = 0.5 (50%)</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portofolio Anggota Kelompok -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0"><i class="fas fa-users me-2"></i>Anggota Kelompok</h5>
+        </div>
+        <div class="card-body">
+            <div class="row mb-4">
+                <div class="col-md-2 text-center">
+                    <img src="/static/foto/IMG_20250419_170429.jpg" class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Rifky">
+                </div>
+                <div class="col-md-10 d-flex align-items-center">
+                    <div>
+                        <h5>Rifky Dwi Rahmat Prakoso</h5>
+                        <p class="mb-2">NIM: H1D024001</p>
+                        <p class="mb-2">
+                            <i class="fab fa-instagram me-2"></i>
+                            <a href="https://instagram.com/rifky.prakoso_" target="_blank" class="text-decoration-none">@rifky.prakoso_</a>
+                        </p>
+                        <p class="fst-italic">"Kode boleh salah, semangat jangan patah."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-2 text-center">
+                    <img src="/static/foto/WhatsApp Image 2025-04-19 at 16.41.33_c04d27f6.jpg" class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Astria">
+                </div>
+                <div class="col-md-10 d-flex align-items-center">
+                    <div>
+                        <h5>Astria Dina Fitri</h5>
+                        <p class="mb-2">NIM: H1D024004</p>
+                        <p class="mb-2">
+                            <i class="fab fa-instagram me-2"></i>
+                            <a href="https://instagram.com/df.astriiaa" target="_blank" class="text-decoration-none">@df.astriiaa</a>
+                        </p>
+                        <p class="fst-italic">"hidup kadang kidding, dikit-dikit ngoding."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <img src="/static/foto/WhatsApp Image 2025-04-19 at 17.10.06_728c6019.jpg" class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Wakhid">
+                </div>
+                <div class="col-md-10 d-flex align-items-center">
+                    <div>
+                        <h5>Wakhid Nugroho</h5>
+                        <p class="mb-2">NIM: H1D024003</p>
+                        <p class="mb-2">
+                            <i class="fab fa-instagram me-2"></i>
+                            <a href="https://instagram.com/wkhidngrh" target="_blank" class="text-decoration-none">@wkhidngrh</a>
+                        </p>
+                        <p class="fst-italic">"Jangan takut gagal, server down aja bisa di-restart"</p>
                     </div>
                 </div>
             </div>

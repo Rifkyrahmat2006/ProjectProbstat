@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 import csv
-import os
 import math
 import matplotlib
 matplotlib.use('Agg')  # Set backend ke Agg sebelum mengimpor pyplot
@@ -119,12 +118,6 @@ def calculate_statistics(data):
     q1 = sorted_values[q1_idx]
     q3 = sorted_values[q3_idx]
     
-    # Skewness
-    skewness = sum((x - mean) ** 3 for x in values) / (n * std_dev ** 3)
-    
-    # Kurtosis
-    kurtosis = sum((x - mean) ** 4 for x in values) / (n * std_dev ** 4) - 3
-    
     # Modus
     value_counts = {}
     for value in values:
@@ -159,8 +152,6 @@ def calculate_statistics(data):
         'std_dev': std_dev,
         'q1': q1,
         'q3': q3,
-        'skewness': skewness,
-        'kurtosis': kurtosis,
         'mode': mode,
         'frequency_distribution': freq_dist,
         'sorted_data': sorted_values
@@ -275,10 +266,6 @@ def home():
                              error=str(e),
                              current_subject=current_subject,
                              subjects=SUBJECTS)
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run(debug=True) 
