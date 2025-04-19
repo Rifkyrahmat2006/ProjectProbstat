@@ -4,7 +4,7 @@ import os
 import math
 import matplotlib
 matplotlib.use('Agg')  # Set backend ke Agg sebelum mengimpor pyplot
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt #Test komen
 import seaborn as sns
 import io
 import base64
