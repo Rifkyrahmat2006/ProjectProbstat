@@ -7,7 +7,8 @@ body {
 
 /* Navbar Customization */
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    background: linear-gradient(to right, #2e3192 0%, #1bffff 100%);  
 }
 
 .navbar-brand {
@@ -25,11 +26,14 @@ body {
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);  
 }
 
 .card-title {
-    color: #2c3e50;
+    color:  #2c3e50;
     font-weight: 600;
+    font-size: 1.2rem;
+    
 }
 
 /* Table Styling */
@@ -52,7 +56,7 @@ section h2 {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+    background: linear-gradient(135deg, #0d6efd 0%, #2a2a2a 100%);
     color: white;
     padding: 4rem 0;
     margin-bottom: 3rem;
@@ -62,6 +66,22 @@ section h2 {
 .img-fluid {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.rounded-circle {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.rounded-circle:hover {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 /* Footer Styling */

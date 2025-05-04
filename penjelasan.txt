@@ -1,0 +1,112 @@
+PENJELASAN PROGRAM APLIKASI ANALISIS STATISTIK NILAI OLIMPIADE
+
+1. STRUKTUR PROGRAM
+Program ini adalah aplikasi web Flask yang digunakan untuk menganalisis statistik nilai peserta olimpiade dari berbagai bidang. Program terdiri dari beberapa komponen utama:
+
+a) Import Library
+- Flask: Framework web
+- Matplotlib: Library untuk visualisasi data
+- io dan base64: Untuk menangani gambar plot
+
+b) Konfigurasi Data
+- SUBJECTS: Dictionary yang memetakan kode bidang ke nama lengkap
+- SUBJECT_DATA: Dictionary yang menyimpan data nilai peserta untuk setiap bidang
+
+2. FUNGSI-FUNGSI UTAMA
+
+a) get_subject_data(subject)
+- Fungsi untuk mengambil data bidang tertentu
+- Mengkonversi nilai string ke float
+- Mengembalikan list dictionary berisi data peserta
+
+b) calculate_statistics(data)
+- Menghitung statistik dasar dari data:
+  * Jumlah data (n)
+  * Nilai minimum
+  * Nilai maksimum
+  * Rata-rata (mean)
+  * Median
+  * Standar deviasi
+  * Kuartil (Q1, Q3)
+  * Modus
+  * Distribusi frekuensi
+
+c) Fungsi Visualisasi
+1. create_stem_leaf_plot(data)
+   - Membuat plot stem and leaf
+   - Memisahkan nilai menjadi stem dan leaf
+   - Menampilkan distribusi data
+
+2. create_histogram(data)
+   - Membuat histogram dengan 5 bins
+   - Menampilkan distribusi frekuensi nilai
+
+3. create_box_plot(data)
+   - Membuat box plot
+   - Menampilkan statistik deskriptif (median, kuartil, outlier)
+
+d) Route Utama (/)
+- Menangani request GET
+- Mengambil parameter subject dari URL
+- Memproses data dan statistik
+- Merender template dengan hasil
+
+3. ALUR PROGRAM
+
+1. User mengakses aplikasi melalui browser
+2. Program mengambil parameter subject dari URL (default: matematika)
+3. Data bidang diproses melalui get_subject_data()
+4. Statistik dihitung menggunakan calculate_statistics()
+5. Visualisasi dibuat menggunakan fungsi-fungsi plotting
+6. Hasil ditampilkan di template HTML
+
+4. FITUR UTAMA
+
+a) Analisis Statistik
+- Perhitungan statistik deskriptif lengkap
+- Distribusi frekuensi
+- Visualisasi data dalam berbagai format
+
+b) Visualisasi Data
+- Stem and Leaf Plot
+- Histogram
+- Box Plot
+
+c) Antarmuka Web
+- Pemilihan bidang melalui dropdown
+- Tampilan tabel data
+- Grafik interaktif
+
+5. KEAMANAN DAN PENANGANAN ERROR
+
+- Validasi input subject
+- Penanganan error saat konversi data
+- Pembersihan memori setelah membuat plot
+- Penggunaan backend 'Agg' untuk matplotlib
+
+6. PENGEMBANGAN
+
+Program ini dapat dikembangkan dengan menambahkan:
+- Analisis statistik lebih lanjut
+- Visualisasi tambahan
+- Fitur ekspor data
+- Autentikasi pengguna
+- Database untuk penyimpanan data
+
+7. PENGGUNAAN
+
+1. Jalankan program dengan perintah: python app.py
+2. Buka browser dan akses: http://localhost:5000
+3. Pilih bidang yang ingin dianalisis
+4. Lihat hasil statistik dan visualisasi
+
+8. KETERBATASAN
+
+- Data statis (hardcoded)
+- Visualisasi terbatas
+- Tidak ada fitur penyimpanan data
+- Tidak ada autentikasi
+
+9. KESIMPULAN
+
+Program ini menyediakan alat analisis statistik dasar untuk data nilai olimpiade dengan visualisasi yang informatif. Program dapat dikembangkan lebih lanjut untuk menambahkan fitur-fitur yang lebih canggih dan meningkatkan fungsionalitasnya. 

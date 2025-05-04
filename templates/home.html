@@ -32,6 +32,7 @@
         <i class="fas fa-exclamation-circle me-2"></i>{{ error }}
     </div>
     {% else %}
+    
     <!-- Tabel Data -->
     <div class="card mb-4">
         <div class="card-header bg-primary text-white">
@@ -180,56 +181,6 @@
         </div>
     </div>
 
-    <!-- Kasus Penerapan Materi -->
-    <div class="card mb-4">
-        <div class="card-header bg-primary text-white">
-            <h5 class="mb-0"><i class="fas fa-question-circle me-2"></i>Kasus Penerapan Materi</h5>
-        </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-6">
-                    <h6 class="mb-3">Diketahui:</h6>
-                    <ul class="list-group">
-                        <li class="list-group-item">Jumlah peserta: {{ statistics.n }}</li>
-                        <li class="list-group-item">Rata-rata nilai: {{ "%.2f"|format(statistics.mean) }}</li>
-                        <li class="list-group-item">Standar deviasi: {{ "%.2f"|format(statistics.std_dev) }}</li>
-                        <li class="list-group-item">Nilai minimum: {{ "%.2f"|format(statistics.min) }}</li>
-                        <li class="list-group-item">Nilai maksimum: {{ "%.2f"|format(statistics.max) }}</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h6 class="mb-3">Pertanyaan:</h6>
-                    <ol class="list-group">
-                        <li class="list-group-item">Berapa probabilitas peserta mendapatkan nilai di atas rata-rata?</li>
-                        <li class="list-group-item">Berapa probabilitas peserta mendapatkan nilai antara Q1 dan Q3?</li>
-                        <li class="list-group-item">Jika diambil sampel acak 5 peserta, berapa probabilitas minimal 3 peserta mendapatkan nilai di atas rata-rata?</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-12">
-                    <h6 class="mb-3">Jawaban:</h6>
-                    <div class="card">
-                        <div class="card-body">
-                            <h6>1. Probabilitas nilai di atas rata-rata:</h6>
-                            <p>Menggunakan distribusi normal:</p>
-                            <p>P(X > μ) = 0.5 (50%)</p>
-                            
-                            <h6>2. Probabilitas nilai antara Q1 dan Q3:</h6>
-                            <p>Menggunakan IQR:</p>
-                            <p>P(Q1 < X < Q3) = 0.5 (50%)</p>
-                            
-                            <h6>3. Probabilitas minimal 3 peserta di atas rata-rata:</h6>
-                            <p>Menggunakan distribusi binomial:</p>
-                            <p>P(X ≥ 3) = Σ C(5,k) * (0.5)^k * (0.5)^(5-k) untuk k = 3,4,5</p>
-                            <p>P(X ≥ 3) = 0.5 (50%)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Portofolio Anggota Kelompok -->
     <div class="card mb-4">
         <div class="card-header bg-primary text-white">
@@ -238,7 +189,7 @@
         <div class="card-body">
             <div class="row mb-4">
                 <div class="col-md-2 text-center">
-                    <img src="/static/foto/Rifky.jpg" class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Rifky">
+                    <img src="/static/foto/Rifky.jpg" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" alt="Rifky">
                 </div>
                 <div class="col-md-10 d-flex align-items-center">
                     <div>
@@ -248,14 +199,14 @@
                             <i class="fab fa-instagram me-2"></i>
                             <a href="https://instagram.com/rifky.prakoso_" target="_blank" class="text-decoration-none">@rifky.prakoso_</a>
                         </p>
-                        <p class="fst-italic">"Kode boleh salah, semangat jangan patah."</p>
+                        <p class="fst-italic">"Code boleh salah, semangat jangan patah."</p>
                     </div>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <div class="col-md-2 text-center">
-                    <img src="/static/foto/Astria.jpg" class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Astria">
+                    <img src="/static/foto/Astria.jpg" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" alt="Astria">
                 </div>
                 <div class="col-md-10 d-flex align-items-center">
                     <div>
@@ -272,7 +223,7 @@
 
             <div class="row">
                 <div class="col-md-2 text-center">
-                    <img src="/static/foto/Wakhid.jpg" class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Wakhid">
+                    <img src="/static/foto/Wakhid.jpg" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" alt="Wakhid">
                 </div>
                 <div class="col-md-10 d-flex align-items-center">
                     <div>
