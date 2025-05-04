@@ -25,9 +25,9 @@ b) calculate_statistics(data)
   * Nilai minimum
   * Nilai maksimum
   * Rata-rata (mean)
-  * Median
+  * Median (menggunakan sorted())
   * Standar deviasi
-  * Kuartil (Q1, Q3)
+  * Kuartil (Q1, Q3) menggunakan sorted()
   * Modus
   * Distribusi frekuensi
 
@@ -56,7 +56,7 @@ d) Route Utama (/)
 1. User mengakses aplikasi melalui browser
 2. Program mengambil parameter subject dari URL (default: matematika)
 3. Data bidang diproses melalui get_subject_data()
-4. Statistik dihitung menggunakan calculate_statistics()
+4. Statistik dihitung menggunakan calculate_statistics() dengan sorted()
 5. Visualisasi dibuat menggunakan fungsi-fungsi plotting
 6. Hasil ditampilkan di template HTML
 
@@ -102,11 +102,11 @@ Program ini dapat dikembangkan dengan menambahkan:
 
 8. KETERBATASAN
 
-- Data statis (hardcoded)
-- Visualisasi terbatas
+- Data statis (hardcoded dalam SUBJECT_DATA)
+- Visualisasi terbatas pada matplotlib
 - Tidak ada fitur penyimpanan data
 - Tidak ada autentikasi
 
 9. KESIMPULAN
 
-Program ini menyediakan alat analisis statistik dasar untuk data nilai olimpiade dengan visualisasi yang informatif. Program dapat dikembangkan lebih lanjut untuk menambahkan fitur-fitur yang lebih canggih dan meningkatkan fungsionalitasnya. 
+Program ini menyediakan alat analisis statistik dasar untuk data nilai olimpiade dengan visualisasi yang informatif. Program menggunakan fungsi sorted() bawaan Python untuk perhitungan statistik dan dapat dikembangkan lebih lanjut untuk menambahkan fitur-fitur yang lebih canggih. 

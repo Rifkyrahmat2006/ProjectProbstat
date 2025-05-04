@@ -15,17 +15,6 @@ Program1/
 │   ├── base.html
 │   └── home.html
 │
-├── data/
-│   ├── Matematika.csv
-│   ├── Fisika.csv
-│   ├── Kimia.csv
-│   ├── Biologi.csv
-│   ├── Informatika.csv
-│   ├── Astronomi.csv
-│   ├── Ekonomi.csv
-│   ├── Kebumian.csv
-│   └── Geografi.csv
-│
 ├── app.py
 ├── requirements.txt
 └── vercel.json
@@ -77,12 +66,8 @@ Program ini merupakan website pengolahan data hasil tryout SNBT yang dibangun me
 ### Library Python
 - Flask (Web Framework)
 - Matplotlib (Visualisasi Data)
-- Seaborn (Visualisasi Data)
 
 ### Library Bawaan Python
-- csv (Pembacaan file CSV)
-- os (Operasi file)
-- math (Perhitungan statistik)
 - io (BytesIO untuk gambar)
 - base64 (Encoding gambar)
 
@@ -116,12 +101,11 @@ Program ini merupakan website pengolahan data hasil tryout SNBT yang dibangun me
 
 - flask>=2.3.3
 - matplotlib>=3.8.0
-- seaborn>=0.13.0
 
 ## Catatan
 
-- Program menggunakan file CSV terpisah untuk setiap bidang
+- Data disimpan dalam dictionary SUBJECT_DATA di app.py
 - Setiap bidang dibatasi 20 data peserta
-- Visualisasi data dibuat secara dinamis menggunakan matplotlib dan seaborn
-- Perhitungan statistik diimplementasikan secara manual menggunakan Python
+- Visualisasi data dibuat secara dinamis menggunakan matplotlib
+- Perhitungan statistik menggunakan fungsi sorted() bawaan Python
 - Program dapat di-deploy ke Vercel menggunakan konfigurasi vercel.json 
